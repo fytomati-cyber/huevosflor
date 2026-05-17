@@ -1,0 +1,145 @@
+/* ==========================================
+   1. BASE Y ESTILOS GENERALES
+   ========================================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fef6e4, #aee1f9);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+main, section {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #e76f51;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f4a261;
+  padding-bottom: 5px;
+}
+
+/* ==========================================
+   2. ENCABEZADO
+   ========================================== */
+header {
+  background: #e76f51;
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+/* ==========================================
+   3. BOTONES Y CONTROLES GENERALES
+   ========================================== */
+button {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ==========================================
+   4. PANEL DE STOCK
+   ========================================== */
+.grid-stock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.card-stock {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 4px solid #e76f51;
+}
+
+/* ==========================================
+   5. SECCIÓN DE VENTA RÁPIDA
+   ========================================== */
+.controles-rapidos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botones de Categoría (Tamaños) */
+.grupo-categorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-cat {
+  background-color: #fef6e4;
+  color: #e76f51;
+  border: 2px solid #e76f51;
+}
+
+.btn-cat.active {
+  background-color: #e76f51;
+  color: white;
+  box-shadow: 0 0 10px rgba(231,111,81,0.4);
+}
+
+/* Botones de Cantidades (+1, +6, +12, etc) */
+.grupo-btns button {
+  background-color: #264653;
+  margin: 5px;
+}
+
+/* ==========================================
+   6. TABLAS E HISTORIAL
+   ========================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #f4a261;
+  color: white;
+}
+
+/* Clase para identificar ventas eliminadas */
+.fila-eliminada {
+  background-color: #ffe5e5 !important; /* Rojo muy claro */
+  color: #d90429 !important;           /* Texto rojo */
+  text-decoration: line-through;      /* Tachado */
+}
+
+/* Estilo para el pie de tabla (Totales) */
+tfoot td {
+  font-weight: bold;
+  background-color: #fef6e4;
+}
